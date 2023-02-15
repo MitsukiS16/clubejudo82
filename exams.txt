@@ -1,3 +1,0 @@
-ph1, ola
-ph2, ola2
-ph3, ola3

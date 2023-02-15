@@ -25,6 +25,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     line-height: 80px;
+    
 
   /**  background-color: #099;
     color: white;
@@ -56,7 +57,7 @@ a.active, a:hover{
 }
 
 
-
+/* logo stuf */
 label.logo{
     color: rgb(132, 0, 255);
     font-size: 35px;
@@ -70,7 +71,6 @@ label.logo{
     color: rgb(9, 28, 29);
     float: right;
     line-height: 80px;
-    margin-right: 40px;
     cursor: pointer;
 }
 
@@ -138,12 +138,13 @@ article {
     background-color: rgb(200, 238, 255);
     color: black;
     cursor: pointer;
-    padding: 12px;
-    width: 200px;
+    padding: 6px;
+    width: 100%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
+
 }
 
 .active, .collapsible:hover {
@@ -151,6 +152,7 @@ article {
     color: black
 }
 
+/*icon na barr*/
 .collapsible:after {
     content: '\002B';
     color: white;
@@ -158,15 +160,15 @@ article {
     float: right;
     margin-left: 5px;
 }
+/*---*/
 
 .active:after {
     content: "\2212";
 }
 
 .content {
-    padding: 0 18px;
     max-height: 0;
-    width: 200px;
+    width: 100%;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
@@ -180,18 +182,17 @@ article {
 
 .nextto{
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid;
+    border-color: black;
     background-color: white;
-    width: 22%;
+    width: 20%;
     text-align: center;
-    border-radius: 7px;
-    border-radius: 7px;    
+
 }
 
 .wrap-collabsible {
     margin-bottom: 1.2rem 0;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+
 }
 
 /* ------------------ */
