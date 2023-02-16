@@ -12,23 +12,39 @@
 </head>
 
 <body>
+    
 
-    <nav>
-        <label class="logo">Judo</label>
-        <ul>
-            <li><a class="active" href="/home.html"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="/documentation.html"><i class="fa fa-book"></i> Documentação</a></li>
-            <li><a href="/exams.html"><i class="fa fa-graduation-cap"></i> Exams</a></li>
-            <li><a href="/quiz.html"><i class="fa fa-question-circle"></i> Quizes</a></li>
-            <li><a href="/contacts.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a></li>
-        </ul>
-    </nav>
+    <div class="topnav">
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px;float:right;">
+            <input type="text" placeholder="Pesquisa.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
 
-    <footer>
-        <p> Clarisse Carvalho 2022 </p>
-    </footer>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Clube</a>
+            <a href="#">Judo</a>
+            <a href="#">Multimédia</a>
+            <a href="#">Quizes</a>
+            <a href="#">Graduação</a>
+            <a href="#">Contactos</a>
+        </div>
 
+    </div>
+
+
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <h2>Clube Judo 82</h2>
+
+        <p>olaaa :)</p>
+
+    </div>
 
 
 </body>
+
+<script src="navbar.js"></script>
+
 </html>

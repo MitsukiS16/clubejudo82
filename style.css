@@ -10,88 +10,7 @@ body {
     font-family: montserrat;
 }
 
-nav {
-    width: 100%;
-    height: 80px;
-    
-    background-color: rgb(200, 238, 255);
-}
 
-nav ul {
-    float: right;
-    margin-right: 20px;
-}
-
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    
-
-  /**  background-color: #099;
-    color: white;
-    text-decoration: none;
-    border-radius: 60px;
-    height: 32px;
-    display: inline-flex;
-    align-items: center;
-    overflow:hidden;
-    width: auto;
-    max-width: 32px; I'm animating max-width because width needs to be auto, and auto can't be animated
-    -webkit-transition: max-width 0.5s;
-    transition: max-width 0.5s; **/
-}
-
-nav ul li a {  
-    color: rgb(5, 0, 104);
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-
-a.active, a:hover{
-    background-color: rgb(0, 204, 255);
-    transition: .5s;
-    max-width: 300px;
-
-}
-
-
-/* logo stuf */
-label.logo{
-    color: rgb(132, 0, 255);
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 30px;
-    font-weight: bold;
-}
-
-.checkbtn {
-    font-size: 30px;
-    color: rgb(9, 28, 29);
-    float: right;
-    line-height: 80px;
-    cursor: pointer;
-}
-
-
-
-
-footer {
-    text-align: center;
-    background-color: rgb(200, 238, 255);
-    color: #333;
-    font-size: 16px;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-}
-
-article {
-    font-size: 30px;
-}
 
 
 
@@ -268,3 +187,136 @@ input[type='checkbox'] {
 img {
     width: 100%;
 }
+
+
+/* Top bar menu */
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #8dccff;
+    color: white;
+  }
+
+
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; 
+    width: 0; 
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #8dccff; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 150px 8px 30px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #404040;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: black;
+    background-color: #ff844b;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    color: black;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #8dccff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #ff844b;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+/*-----*/
+
+  /* Style the search field */
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid grey;
+    float: left;
+    width: 70%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 18%;
+    padding: 10px;
+    background: #8dccff;
+    color: white;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #ff844b;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+  /* ----- */
