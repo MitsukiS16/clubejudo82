@@ -12,33 +12,53 @@
 </head>
 
 <body>
+    
 
-    <nav>
-        <label class="logo">Judo</label>
-        <ul>
-            <li><a href="/home.html"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="/documentation.html"><i class="fa fa-book"></i> Documentação</a></li>
-            <li><a href="/exams.html"><i class="fa fa-graduation-cap"></i> Exams</a></li>
-            <li><a href="/quiz.html"><i class="fa fa-question-circle"></i> Quizes</a></li>
-            <li><a class="active" href="/contacts.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a></li>
-        </ul>
-    </nav>
+    <div class="topnav">
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px;float:right;">
+            <input type="text" placeholder="Pesquisa.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+        
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="home.html">Home</a>
+            <a href="clube.html">Clube</a>
+            <a href="judo.html">Judo</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="quizes.html">Quizes</a>
+            <a href="graduacoes.html">Graduação</a>
+            <a href="atletas.html">Atletas</a>
+            <a class="active" href="contacts.html">Contactos</a>
+        </div>
+
+    </div>
 
 
 
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <h2>Clube Judo 82</h2>
 
-    <br>
+        <p>Categoria - Clube desportivo</p> 
+        <p>Morada - Praceta Ferreira de Castro 20 - Águas Santas, Maia, Portugal, 4425-082</p>
+        <p>Telemóvel - 938 403 222</p>
+        <p>Horário: </p>
+        <p>Iniciados (3 anos - 5 anos): Monday and Friday - 18h-18h45 </p>
+        <p>Iniciados (6 anos - 9 anos): Monday and Friday - 18h45-19h30 </p>
+        <p>Juvenis (10 anos - 14 anos): Tuesday and T - 18h30-19h30 </p>
+        <p>Juniores e Seniores (a partir dos 15 anos): Monday-Friday* - 19h30-21h  </p>
+        <p>- 3a/5a - treinos iniciação/manutenção </p>
+        <p>- 2a/4a/6a - treinos de competição </p>
+        <p> *4a - Treinos no CAR - Centro de Alto Rendimento de Vila Nova de Gaia </p>
 
-    home-icon morada
-    phone-icon phone number 
-    facebook-icon link facebook
-    instagram-icon link instagram 
+    </div>
 
-
-
-    <footer>
-        <p> Clarisse Carvalho 2022 </p>
-    </footer>
 
 </body>
+
+<script src="navbar.js"></script>
+
 </html>

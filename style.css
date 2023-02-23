@@ -8,6 +8,7 @@
 
 body {
     font-family: montserrat;
+    font-size: 16px;
 }
 
 
@@ -81,9 +82,6 @@ body {
 }
 /*---*/
 
-.active:after {
-    content: "\2212";
-}
 
 /* ------------------ */
 
@@ -108,71 +106,108 @@ body {
 /* ------------------ */
 
 
+/*** collapse button graduaces ****/
 
+input[type='checkbox'] { 
+  display: none; 
+} 
 
+.wrap-collabsible { 
+  margin: 1.2rem 0; 
+  width: 50%;
+} 
 
-/* exams question 
+.lbl-toggle { 
+  display: block; 
+  font-weight: bold; 
+  font-family: monospace; 
+  font-size: 1.2rem; 
+  text-transform: uppercase; 
+  text-align: center; 
+  padding: 1rem; 
+  color: #9f9f9f; 
+  background:  rgba(250, 250, 153); 
 
-input[type='checkbox'] {
-    display: none;
+   cursor: pointer; 
+   border-radius: 7px; 
+   transition: all 0.25s ease-out; 
+} 
+
+.lbl-toggle:hover { color: black; } 
+
+.lbl-toggle::before { 
+  content: ' '; 
+  display: inline-block; 
+  border-top: 5px solid transparent; 
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid currentColor; 
+  vertical-align: middle; 
+  margin-right: .7rem; 
+  transform: translateY(-2px); 
+  transition: transform .2s ease-out; 
+} 
+
+.toggle:checked+.lbl-toggle::before { 
+  transform: rotate(90deg) translateX(-3px); 
+} 
+
+.collapsible-content { 
+  max-height: 0px; 
+  overflow: hidden; 
+  transition: max-height .25s ease-in-out; 
+} 
+
+.toggle:checked + .lbl-toggle + .collapsible-content { 
+  max-height: 350px; 
+} 
+
+.toggle:checked+.lbl-toggle { 
+  border-bottom-right-radius: 0; 
+  border-bottom-left-radius: 0; 
+} 
+
+.collapsible-content .content-inner { 
+  background: rgba(250, 250, 153, .2); 
+  border-bottom: 1px solid rgba(250, 250, 153, .45); 
+  border-bottom-left-radius: 7px; 
+  border-bottom-right-radius: 7px; 
+  padding: .5rem 1rem;
+} 
+
+.collapsible-content p { 
+  margin-bottom: 0; 
 }
 
-.lbl-toggle {
-    display: block;
-    font-size: 1.2rem;
-    padding: 1rem;
-    color: black;
-    background: rgb(255, 255, 198);
-    border: 1px solid rgba(255, 242, 0, 0.5);
+
+/**------*/
+
+ /*** botao de perguntas de graduacao ***/
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
     cursor: pointer;
-    border-radius: 7px;
-    transition: all 0.25s ease-out;
-    width: 80%;
-}
-
-.lbl-toggle:hover {
-    background: rgb(250, 250, 0);
-}
-
-.lbl-toggle::before {
-    content: ' ';
-    display: inline-block;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid currentColor;
-    vertical-align: middle;
-    margin-right: .7rem;
-    transform: translateY(-2px);
-    transition: transform .2s ease-out;
-}
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
   
-.toggle:checked + .lbl-toggle::before {
-    transform: rotate(90deg) translateX(-3px);
-}
-
-.collapsible-content {
-    max-height: 0px;
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
     overflow: hidden;
-    transition: max-height .25s ease-in-out;
-    width: 80%;
-}
-
-.toggle:checked + .lbl-toggle + .collapsible-content {
-    max-height: 100vh;
-}
-
-.toggle:checked + .lbl-toggle {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.collapsible-content .content-inner {
-    background: rgb(240, 240, 240);
-    border: 1px solid rgba(255, 250, 0, 0.5);
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    padding: .5rem 1rem;
-}*/
+    background-color: #f1f1f1;
+  }
 
 /* ------------------ */
 
@@ -185,7 +220,8 @@ input[type='checkbox'] {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 80%;
 }
 
 
@@ -215,7 +251,7 @@ img {
   /* Add a color to the active/current link */
   .topnav a.active {
     background-color: #8dccff;
-    color: white;
+    color: #ff844b;
   }
 
 
@@ -228,6 +264,7 @@ img {
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
+    flex-direction: column;
     background-color: #8dccff; 
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 50px; /* Place content 60px from the top */
@@ -236,7 +273,8 @@ img {
   
   /* The sidebar links */
   .sidebar a {
-    padding: 8px 150px 8px 30px;
+    padding: 8px 190px 8px 30px;
+    max-width: 190px;
     text-decoration: none;
     font-size: 25px;
     color: #404040;
@@ -254,9 +292,10 @@ img {
     position: absolute;
     color: black;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    left: 150px;
+    padding: 10 0 0 150px;
+    font-size: 20px;
+
   }
   
   /* The button used to open the sidebar */
@@ -265,8 +304,12 @@ img {
     cursor: pointer;
     background-color: #8dccff;
     color: white;
-    padding: 10px 15px;
+    padding: 7px 15px;
     border: none;
+    position:absolute;
+    top:0;
+    left:0;
+    border: 1px solid grey;
   }
   
   .openbtn:hover {
@@ -319,4 +362,107 @@ form.example::after {
     display: table;
 }
 
-  /* ----- */
+
+
+/* ------*/
+
+/* page clube --- linha temporal */
+
+ #box1, #box2{
+	width:40%;
+	height:200px;
+	padding:10px;
+    float: center;    
+}
+
+#box1 {
+	border-right: 3px solid black;
+    background:white;
+    float: left;
+    text-align: right;
+    margin-left: 10%;
+}
+
+#box2 {
+	background:white;
+    float: right;
+    text-align: left;
+    margin-right: 10%;
+
+}
+
+#box1 p, #box2 p {
+	white-space:pre;
+	font-size:smaller;
+	font-family:monospace;
+    overflow-wrap: break-word;
+}
+
+
+.boximage img {
+    max-width: 60%;
+    height: 150px;
+    object-fit: fill;
+}
+
+
+/* ------ */
+
+
+/*-- quem nos somos - clube ---*/
+.flex-container {
+    display: flex;
+    height: 150px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 15px;
+    justify-content: center;
+    gap: 15px; 
+  }
+
+  .person-container {
+    width: 30%;
+    background-color: #8dccff;
+    
+
+  }
+
+  /*******/
+
+
+  /*   css image multimedia*/
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+  .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }

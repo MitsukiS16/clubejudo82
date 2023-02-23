@@ -47,7 +47,7 @@ Barra cronoloógica
 2023
 |
 |
-2022 - Torneio internacional de Valença - 3 medalhas de ouro e 1 bronze
+Set/2022 - Torneio internacional de Valença - 3 medalhas de ouro e 1 bronze
 |
 |
 2022 - Torneio Nacional de Juvenis - 2 medalhas de bronze
