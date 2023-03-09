@@ -9,6 +9,9 @@
 body {
     font-family: montserrat;
     font-size: 16px;
+    background-image: url(/multimédia/icon-clube-transp.png);
+    background-color: #cccccc;
+    
 }
 
 
@@ -185,7 +188,7 @@ input[type='checkbox'] {
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-    background-color: #eee;
+    background-color: #eeeeee;
     color: #444;
     cursor: pointer;
     padding: 18px;
