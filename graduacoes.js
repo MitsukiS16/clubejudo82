@@ -2,11 +2,11 @@
 //const answer = "......"
 
 let questionshtml = "";
-const questions = [ "P01. Quais são as cores dos cintos?", 
-                    "P02. Qual é o nome do criador do Judo?",
-                    "P03. Qual é o nome da primeira escola de Judo?", 
-                    "P04. Conta a história do judo.",
-                    "P05. Dá 3 exemplos de faltas num combate.",
+const questions = [ "P01. Cores dos cintos?", 
+                    "P02. Nome do criador do Judo?",
+                    "P03. Nome da primeira escola de Judo?", 
+                    "P04. História do judo?",
+                    "P05. 3 exemplos de faltas em combate.",
                     "P06. Que tipos de técnicas existem?",
                     "P07. Qual é a cor do cinto mais alto?",
                     "P08. Que formas é possível fazer Ippon?",

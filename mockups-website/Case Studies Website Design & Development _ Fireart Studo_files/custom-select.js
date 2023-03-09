@@ -1,0 +1,27 @@
+function createCustomSelect(selector){let selects=document.querySelectorAll(selector)
+function render(select){const options=select.querySelectorAll('option')
+const customSelect=document.createElement('div')
+const customSelectLabel=document.createElement('div')
+const customSelectList=document.createElement('ul')
+customSelect.setAttribute('class','c-select')
+customSelectLabel.setAttribute('class','c-select__label')
+select.parentNode.insertBefore(customSelect,select)
+customSelect.appendChild(customSelectLabel)
+customSelect.appendChild(customSelectList)
+customSelect.appendChild(select)
+function pasteCustomLabel(el,text){el.innerHTML=text}
+pasteCustomLabel(customSelectLabel,options[select.selectedIndex].innerText)
+options.forEach(option=>{const customOptions=document.createElement('li')
+customSelectList.appendChild(customOptions)
+customOptions.setAttribute('value',option.value)
+customOptions.innerHTML=option.innerText})
+customSelectLabel.addEventListener('click',()=>{if(customSelect.classList.contains('active')){customSelect.classList.remove('active')}else{customSelect.classList.add('active')}})
+document.addEventListener('click',(e)=>{const outsideElement=e.composedPath().includes(customSelect)
+if(customSelect.classList.contains('active')){if(!outsideElement){customSelect.classList.remove('active')}}})
+const customOptions=customSelect.querySelectorAll('li')
+customOptions.forEach((customOption)=>{customOption.addEventListener('click',()=>{pasteCustomLabel(customSelectLabel,customOption.innerText)
+select.value=customOption.innerText
+customSelect.classList.remove('active')
+customSelect.classList.add('checked')})})
+select.addEventListener('custom-change',e=>{pasteCustomLabel(customSelectLabel,e.target.options[e.target.selectedIndex].innerText)})}
+selects.forEach(select=>{render(select)})}
